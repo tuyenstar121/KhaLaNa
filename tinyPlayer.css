@@ -115,7 +115,7 @@
 .music-container .music-info {
   opacity: 1;
   transform: translateY(-150%);
-  background-color: rgba(2, 60, 15, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   border: 0.125em solid black;
 }
 
@@ -139,7 +139,7 @@
 }
 
 .progress {
-  background-color: #15d88d;
+  background-color: #000c08;
   border-radius: 0.25em;
   height: 100%;
   width: 0%;
@@ -225,26 +225,15 @@ input[type='range']::-moz-range-thumb {
 
 @keyframes anitu {
   0% {
-    background-image: url("image/a.jpg");
+    background-image: url("image/b.jpg");
 
   }
 
-  25% {
-    background-image: url("image/2.png");
-
-  }
-
-  50% {
-    background-image: url("image/3.png");
-
-  }
-  75%{
-    background-image: url("image/4.png");
-  }
+  
 
   100% {
 
-    background-image: url("image/a.jpg");
+    background-image: url("image/b.jpg");
 
   }
  
