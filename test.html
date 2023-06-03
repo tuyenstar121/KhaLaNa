@@ -7,7 +7,10 @@
   <META NAME="Generator" CONTENT="EditPlus">
   <META NAME="Author" CONTENT="">
   <META NAME="Keywords" CONTENT="">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <META NAME="Description" CONTENT="">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
   <link rel="stylesheet" href="tinyPlayer.css" />
   <script src="https://kit.fontawesome.com/b8b432d7d3.js" crossorigin="anonymous"></script>
@@ -26,39 +29,21 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-
       z-index: 0;
-
-      background-image: url(image/nature-3082832_1920.jpg);
-
       background-size: cover;
       background-blend-mode: soft-light;
 
 
-      background-color: #28252c;
-
-
+      background-color: #080808
     }
 
-
-    canvas {
-      position: absolute;
-      width: 80%;
-      height: 80%;
-      z-index: 10;
-      left: 10px;
-      top: 0px;
-
-
-
-    }
 
     .audio {
       width: 80%;
       position: absolute;
-      top: 70%;
+      top: 60%;
       height: 20%;
-      z-index: 100;
+      
     }
 
     .box {
@@ -67,7 +52,7 @@
       height: 700px;
       border-radius: 15px;
       overflow: hidden;
-      background-color: #0d0d0e;
+      background-color: #0b000600;
 
       display: flex;
       justify-content: center;
@@ -75,6 +60,10 @@
 
 
 
+    }
+
+    .form {
+      background-color: rgba(0, 0, 0);
     }
 
     .box::before {
@@ -99,14 +88,14 @@
 
       width: 500px;
       height: 700px;
-      background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+      background: linear-gradient(0deg, transparent, #d9138a, #d9138a);
       animation: animate 6s linear infinite;
       transform-origin: bottom right;
       animation-delay: -3s;
 
     }
 
-   
+
 
     .social-media {
       position: static;
@@ -293,9 +282,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-     
+
       left: 2%;
-    top: 25%;
+      top: 25%;
       font-family: 'Baloo Thambi', cursive;
       font-size: 4rem;
 
@@ -307,6 +296,7 @@
     }
 
     .test>span:nth-child(1) {
+
       animation-delay: 0, 25s;
     }
 
@@ -368,86 +358,6 @@
       }
     }
 
-    /* 
-    @media only screen and (max-width:1024px) {
-      .box {
-        position: absolute;
-        width: 800px;
-        height: 900px;
-        border-radius: 12px;
-        overflow: hidden;
-
-        background-color: #070707;
-
-
-
-
-      }
-
-      .box::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-
-        width: 800px;
-        height: 900px;
-        background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
-        animation: animate 6s linear infinite;
-        transform-origin: bottom right;
-      }
-
-      .box::after {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-
-        width: 800px;
-        height: 900px;
-        background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
-        animation: animate 6s linear infinite;
-        transform-origin: bottom right;
-        animation-delay: -3s;
-
-      }
-
-      .form {
-        position: absolute;
-        inset: 3px;
-        border-radius: 8px;
-        background: #28292d;
-        z-index: 1;
-        padding: 50px;
-        background-image: url("image/a.jpg");
-        background-repeat: no-repeat;
-
-        background-size: 100%;
-      }
-
-      .body {
-        display: block;
-        justify-content: center;
-        align-items: center;
-        min-height: 10vh;
-        min-width: 60%;
-        background-image: url(image/images.jfif);
-        background-repeat: repeat;
-        z-index: 0;
-        background-color: #050505;
-      }
-
-      .audio {
-        position: relative;
-        top: 75%;
-        height: 30%;
-        width: 100%;
-        z-index: 30;
-      
-      }
-
-   
-    } */
 
     @keyframes animate {
       0% {
@@ -460,34 +370,82 @@
       }
     }
 
+    .outer-box {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px;
+      height: 350px;
+      background: #0e101a;
+      background-image: url("image/a.jpg");
+      background-blend-mode: hard-light;
+      border-radius: 50%;
+      background-size: cover;
 
-    ;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: rotate 5s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+    .typed-wrapper {
+  /* Màu nền */
+    color: #fff; /* Màu chữ */
+    padding: 10px; /* Khoảng cách giữa chữ và viền */
+    font-size: 14px; 
+    height: 30px;
+    /* Cỡ chữ */
+  }
+
+  .typed-cursor {
+    color: #fff; /* Màu con trỏ chữ */
+  } 
+ canvas {
+	cursor: crosshair;
+	display: block;
+ }
+ 
   </style>
 </HEAD>
 
 <BODY>
 
+  <canvas id="canvas">Canvas is not supported in your browser.</canvas>
   <div class="box">
 
     <div class="form">
-      <div class="test">
-        <span>K</span>
-        <span>H</span>
-        <span>A</span>
-        <span>L</span>
-        <span>A</span>
-        <span>N</span>
-        <span>A </span>
+   
+      <div class="outer-box">
+
+        <div class="test">
+          <span>K</span>
+          <span>H</span>
+          <span>A</span>
+          <span>L</span>
+          <span>A</span>
+          <span>N</span>
+          <span>A </span>
 
 
 
+        </div>
       </div>
    
-
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
       <div class="audio">
+        <h4 id="lyrics" class="typed-wrapper"> </h1>
 
         <div class="wrapper">
-
+       
           <!-- 1. length of song not updating - something with const duration-->
           <div class="music-container" id="music-container">
             <div class="music-info">
@@ -548,8 +506,218 @@
 
   </div>
 
-  
+
   <script>
+    
+    // fun options!
+const PARTICLES_PER_FIREWORK = 400; // 100 - 400 or try 1000
+const FIREWORK_CHANCE = 0.015; // percentage, set to 0 and click instead
+const BASE_PARTICLE_SPEED = 0.3; // between 0-4, controls the size of the overall fireworks
+const FIREWORK_LIFESPAN = 1700; // ms
+const PARTICLE_INITIAL_SPEED = 2.2; // 2-4
+
+// not so fun options =\
+const GRAVITY = 9.8;
+
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+let particles = []; 
+let disableAutoFireworks = false;
+let resetDisable = 0;
+
+let loop = () => {
+
+   if (!disableAutoFireworks && Math.random() < FIREWORK_CHANCE) {
+      createFirework();
+   }
+
+   ctx.globalCompositeOperation = 'source-over';
+   ctx.fillStyle = "rgba(0,0,0,0.03)";
+   ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+   particles.forEach((particle, i) => {
+      particle.animate();
+      particle.render();
+      if (particle.y > canvas.height 
+          || particle.x < 0 
+          || particle.x > canvas.width
+          || particle.alpha <= 0
+         ) {
+         particles.splice(i, 1);
+      }
+   });
+
+   requestAnimationFrame(loop);
+
+};
+
+let createFirework = (
+   x = Math.random() * canvas.width,
+   y = Math.random() * canvas.height
+) => {
+
+   let speed = (Math.random() * 0.3) + BASE_PARTICLE_SPEED;
+   if (speed < 1) {
+      speed += 0.8;
+   }
+   let maxSpeed = speed;
+
+   // Random RGB values for the firework
+   let red = Math.floor(Math.random() * 256);
+   let green = Math.floor(Math.random() * 256);
+   let blue = Math.floor(Math.random() * 256);
+
+   // inner firework
+   for (let i = 0; i < PARTICLES_PER_FIREWORK; i++) {
+      let particle = new Particle(x, y, red, green, blue, speed);
+      particles.push(particle);
+   
+      maxSpeed = (speed > maxSpeed ? speed : maxSpeed);
+   }
+
+   // outer edge particles to make the firework appear more full
+   for (let i = 0; i < 60; i++) {
+      let particle = new Particle(x, y, red, green, blue, maxSpeed, true);
+      particles.push(particle);
+   }
+
+};
+
+class Particle {
+
+  constructor(
+    x = 0,
+    y = 0, 
+    red = ~~(Math.random() * 255), 
+    green = ~~(Math.random() * 255), 
+    blue = ~~(Math.random() * 255), 
+    speed, 
+    isFixedSpeed
+  ) {
+
+      this.x = x;
+      this.y = y;
+      this.red = red;
+      this.green = green;
+      this.blue = blue;
+      this.alpha = 0.05;
+      this.radius = 1 + Math.random();
+      this.angle = Math.random() * 360;
+      this.speed = (Math.random() * speed) + 0.1;
+       
+      this.velocityX = Math.cos(this.angle) * this.speed;
+      this.velocityY = Math.sin(this.angle) * this.speed;
+      this.startTime = (new Date()).getTime();
+      this.duration = Math.random() * 300 + FIREWORK_LIFESPAN;
+      this.currentDiration = 0;
+      this.dampening = 100; // slowing factor at the end
+      this.colour = this.getColour();
+
+      if (isFixedSpeed) {
+         this.speed = speed;
+         this.velocityY = Math.sin(this.angle) * this.speed;
+         this.velocityX = Math.cos(this.angle) * this.speed;
+      }
+
+      this.initialVelocityX = this.velocityX;
+      this.initialVelocityY = this.velocityY;
+
+   }
+
+   animate() {
+
+      this.currentDuration = (new Date()).getTime() - this.startTime;
+
+      // initial speed kick
+      if (this.currentDuration <= 400) {
+
+         this.x += this.initialVelocityX * PARTICLE_INITIAL_SPEED;
+         this.y += this.initialVelocityY * PARTICLE_INITIAL_SPEED;
+         this.alpha += 0.01;
+
+         this.colour = this.getColour(240, 230, 210, 0.4);
+
+      } else {
+
+         // normal expansion
+         this.x += this.velocityX;
+         this.y += this.velocityY;
+         this.colour = this.getColour(this.red, this.green, this.blue, 0.4 + (Math.random() * 0.3));
+
+      }
+
+      this.velocityY += GRAVITY / 1000;
+
+      // slow down particles at the end
+      if (this.currentDuration >= this.duration - 700 && this.currentDuration < this.duration) {
+         this.velocityX -= this.velocityX / this.dampening / 10; 
+         this.velocityY -= this.velocityY / this.dampening / 10;
+      }
+      if (this.currentDuration >= this.duration) {
+         this.velocityX -= this.velocityX / this.dampening; 
+         this.velocityY -= this.velocityY / this.dampening;
+      }
+
+      if (this.currentDuration >= this.duration + this.duration / 1.1) {
+
+         // fade out at the end
+         this.alpha -= 0.02;
+         this.colour = this.getColour();
+
+      } else {
+
+         // fade in during expansion
+         if (this.alpha < 1) {
+            this.alpha += 0.03;
+         }
+
+      }
+   }
+
+   render() {
+
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
+      ctx.lineWidth = this.lineWidth;
+      ctx.fillStyle = this.colour;
+      ctx.fill();
+
+   }
+
+   getColour(red, green, blue, alpha) {
+
+      return `rgba(${red || this.red}, ${green || this.green}, ${blue || this.blue}, ${alpha || this.alpha})`;
+
+   }
+
+}
+
+let updateCanvasSize = () => {
+   canvas.width = window.innerWidth;
+   canvas.height = window.innerHeight;
+};
+
+
+// run it!
+
+updateCanvasSize();
+
+$(canvas).on('click', (e) => {
+
+   createFirework(e.clientX, e.clientY);
+
+   // stop fireworks when clicked, re-enable after short time
+   disableAutoFireworks = true;
+   clearTimeout(resetDisable);
+   resetDisable = setTimeout(() => {
+      disableAutoFireworks = false;
+   }, 8000);
+
+});                                                                                   
+
+loop();
     const musicContainer = document.getElementById('music-container');
     const audioPlayer = musicContainer.querySelector('.audio_player');
 
@@ -576,11 +744,13 @@
     const ranges = musicContainer.querySelectorAll('.player_slider');
     const volInput = musicContainer.querySelector('input[name="volume"]')
 
+
     // const cover = document.getElementById('cover');
 
     // Song Titles - need to get rid of this hard coded list of titles. Need to be able to upload multiple files from desktop or load a list from an API
     const songs = [
-    'Đặng Thị Phương Nhi',
+      'Đặng Thị Phương Nhi',
+
 
     ];
 
@@ -593,8 +763,8 @@
     function loadSong(song) {
       title.innerText = song;
       // audio.src = `music/${song}.mp3`;
-      // need an array of songs, either on the user's harddrive or another website
-      //audio.src = `https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3`;
+
+      // audio.src = `image\RoiTaSeNgamPhaoHoaCungNhau-OlewVietNam-8485329.mp3`;
       // cover.src = `images/${song}.jpg`;
     }
 
@@ -603,8 +773,54 @@
       musicContainer.classList.add('play');
       playBtn.querySelector('i.fas').classList.remove('fa-play');
       playBtn.querySelector('i.fas').classList.add('fa-pause');
-
+      audio.src = "image\\RoiTaSeNgamPhaoHoaCungNhau-OlewVietNam-8485329.mp3";
       audio.play();
+
+      var lyric = `...........,
+      ...........................
+Người đón em đến bên đời là điều tuyệt nhất để khiến em cười
+Người cứ như ô che mưa        , 
+như mây bay qua cho ngày trong xanh        ,
+Ở đây có anh này          , 
+em thật nhỏ bé trong chiếc ôm này
+Ấm hơn chăn mà,
+còn thơm hơn hoa mà, 
+sao em nỡ rời xa______________________________________________?
+Rồi ta sẽ ngắm pháo hoa cùng nhau________
+trên tầng thượng phía bên kia dòng sông
+Vạn lời chúc ấm êm cho nhau là sẽ thành đôi sau vài cái xuân
+Mong trời sẽ thương em, thương anh và cho đôi mình mãi bên nhau dài lâu
+Cho dù thế gian kia cuồng quay trăm bộn bề, ta vẫn không cách rời, huh-huh-uh
+Thấy anh đứng đây rồi, mắt cười cong khoé mi hí đây rồi
+Càng đắm say thế nên em lại sợ một mai mình rời xa nhau
+Anh thơm vào má em này, cho chừa cái thói nói vớ vẩn này
+Mặt ngây ngô ra rồi, còn anh thì đứng cười
+Đây có phải là điều tuyệt nhất?
+Rồi ta sẽ ngắm pháo hoa cùng nhau trên tầng thượng phía bên kia dòng sông
+Vạn lời chúc ấm êm cho nhau là sẽ thành đôi sau vài cái xuân
+Mong trời sẽ thương em, thương anh và cho đôi mình mãi bên nhau dài lâu
+Cho dù thế gian kia cuồng quay trăm bộn bề, ta vẫn không cách rời
+Dù mai Mặt Trời không chiếu sáng trên hành tinh này
+Thì em (thì em) vẫn sẽ tìm thấy anh bằng trái tim này, oh
+Dù mai đời người dẫu có cách ngăn tình ta
+Thì em xin một lần không tên, nguyện yêu anh một đời an yên, oh-huh-oh-huh-huh
+Vạn lời chúc ấm êm cho nhau là sẽ thành đôi sau vài cái xuân
+Mong trời sẽ thương em, thương anh (mong trời sẽ thương em) và cho đôi mình mãi bên nhau dài lâu
+Cho dù thế gian kia cuồng quay trăm bộn bề, ta vẫn không cách rời
+Huh-uh-oh-oh
+Huh-uh-oh-uh-oh (huh-uh-oh-uh-oh)
+Rồi ta sẽ ngắm pháo hoa cùng nhau`;
+
+
+  var lyricArray = lyric.split("\n");
+
+  var typed = new Typed("#lyrics", {
+    strings: lyricArray,
+
+    typeSpeed: 50,
+    backSpeed: 10,
+    loop: true
+  });
     }
 
     // remove Pause icon, add Play icon
@@ -747,14 +963,14 @@
       if (isPlaying) {
         pauseSong();
       } else {
-        
+
         playSong();
         setInterval(nextSong, 4000);
       }
     });
 
     // Change Song
-    
+
     prevBtn.addEventListener('click', prevSong);
     nextBtn.addEventListener('click', nextSong);
 
