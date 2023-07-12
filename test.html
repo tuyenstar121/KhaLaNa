@@ -3,7 +3,7 @@
 
 <HEAD>
   <link rel='shortcut icon' href='image/png-clipart-bulldog-shar-pei-mammal-carnivoran.png' />
-  <TITLE> LY Ngu</TITLE>
+  <TITLE> Ly Ngu </TITLE>
   <META NAME="Generator" CONTENT="EditPlus">
   <META NAME="Author" CONTENT="">
   <META NAME="Keywords" CONTENT="">
@@ -275,7 +275,7 @@
 
     .test {
 
-      
+
       position: absolute;
       color: #111;
       width: 100%;
@@ -284,7 +284,7 @@
       align-items: center;
 
       left: 2%;
-      top: 60%;
+      top: 505%;
       font-family: 'Baloo Thambi', cursive;
       font-size: 4rem;
 
@@ -427,14 +427,14 @@
       <div class="outer-box">
 
         <div class="test">
-          <span>Đ</span>
-          <span>I</span>
-          <span>Ệ</span>
-          <span>U</span>
-       
+          <span>K</span>
+          <span>H</span>
+          <span>A</span>
           <span>L</span>
-          <span>Y</span>
-       
+          <span>A</span>
+          <span>N</span>
+          <span>A </span>
+
 
 
         </div>
@@ -457,13 +457,13 @@
             </div>
             <div class="social-media">
               <ul>
-                <a href="">
+                <a href="https://www.facebook.com/phuongnhi.dang.965">
                   <li id="a"><i class="fab fa-facebook-f"></i></li>
                 </a>
                 <a href="">
                   <li><i class="fab fa-twitter"></i></li>
                 </a>
-                <a href="">
+                <a href="https://www.instagram.com/khalana_n/?hl=en">
                   <li id="b"><i class="fab fa-instagram"></i></li>
                 </a>
                 <li><i class="fab fa-linkedin-in"></i></li>
@@ -719,7 +719,40 @@ $(canvas).on('click', (e) => {
 
 loop();
     const musicContainer = document.getElementById('music-container');
-      const audioPlayer = musicContainer.querySelector('.audio_player');
+    const audioPlayer = musicContainer.querySelector('.audio_player');
+
+    const title = document.getElementById('title');
+    // 
+    const progressRange = document.querySelector('.progress-range');
+    const progressBar = document.querySelector('.progress-bar');
+    // 
+    // const progressContainer = document.getElementById('progress-container');
+    // const progress = document.getElementById('progress');
+
+    const currentTime = document.querySelector('.time-elapsed');
+    const duration = document.querySelector('.time-duration');
+
+    const audio = document.getElementById('audio');
+
+    const prevBtn = document.getElementById('prev');
+    const playBtn = document.getElementById('play');
+    const nextBtn = document.getElementById('next');
+
+    const speaker = musicContainer.querySelector('.speaker');
+    const speakerIcon = musicContainer.querySelector('#speaker_icon');
+
+    const ranges = musicContainer.querySelectorAll('.player_slider');
+    const volInput = musicContainer.querySelector('input[name="volume"]')
+
+
+    // const cover = document.getElementById('cover');
+
+    // Song Titles - need to get rid of this hard coded list of titles. Need to be able to upload multiple files from desktop or load a list from an API
+    const songs = [
+      'Điệu Ly',
+
+
+    ];
 
     // Keep track of song
     let songIndex = 0;
